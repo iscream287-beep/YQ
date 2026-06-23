@@ -1,0 +1,20 @@
+# Hugo build output
+/public/
+/resources/_gen/
+/.hugo_cache/
+/.hugo_build.lock
+/.hugo-server.*.log
+
+# Local Hugo binary downloaded for Windows development
+/hugo.exe
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
+
+# Local planning notes
+/task_plan.md
+/findings.md
+/progress.md

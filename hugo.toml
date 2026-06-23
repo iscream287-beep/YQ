@@ -1,0 +1,146 @@
+baseURL = "https://iscream287-beep.github.io/YQ/"
+locale = "zh-CN"
+title = "氧气博客"
+theme = "hugo-theme-stack"
+defaultContentLanguage = "zh"
+hasCJKLanguage = true
+enableRobotsTXT = true
+summaryLength = 24
+timeZone = "Asia/Shanghai"
+
+[pagination]
+    pagerSize = 8
+
+[permalinks]
+    posts = "/posts/:slug/"
+    page = "/:slug/"
+
+[taxonomies]
+    tag = "tags"
+    category = "categories"
+
+[outputs]
+    home = ["HTML", "RSS"]
+    section = ["HTML", "RSS"]
+    page = ["HTML"]
+
+[params]
+    mainSections = ["posts"]
+    rssFullContent = true
+    favicon = "img/oxygen.jpg"
+    description = "一个用于记录技术、生活和长期思考的个人博客。"
+
+    [params.footer]
+        since = 2026
+        customText = ""
+
+    [params.dateFormat]
+        published = "2006-01-02"
+        lastUpdated = "2006-01-02"
+
+    [params.sidebar]
+        compact = false
+        emoji = ""
+        subtitle = "记录技术、生活和长期思考"
+        avatar = "img/oxygen.jpg"
+
+    [params.article]
+        headingAnchor = true
+        math = false
+        toc = true
+        readingTime = true
+
+        [params.article.list]
+            showTags = true
+
+        [params.article.license]
+            enabled = false
+            default = "Licensed under CC BY-NC-SA 4.0"
+
+    [params.widgets]
+        homepage = [
+            { type = "search" },
+            { type = "archives", params = { limit = 5 } },
+            { type = "categories", params = { limit = 10 } },
+            { type = "tag-cloud", params = { limit = 20 } },
+        ]
+        page = [
+            { type = "toc" },
+        ]
+
+    [params.comments]
+        enabled = false
+        provider = "disqus"
+
+    [params.colorScheme]
+        toggle = true
+        default = "auto"
+
+    [params.imageProcessing]
+        autoOrient = false
+
+        [params.imageProcessing.content]
+            enabled = true
+            widths = [800, 1600, 2400]
+
+        [params.imageProcessing.thumbnail]
+            enabled = true
+
+[menu]
+    [[menu.main]]
+        identifier = "home"
+        name = "首页"
+        pageRef = "/"
+        weight = 10
+        [menu.main.params]
+            icon = "home"
+
+    [[menu.main]]
+        identifier = "archives"
+        name = "归档"
+        url = "/archives/"
+        weight = 20
+        [menu.main.params]
+            icon = "archives"
+
+    [[menu.main]]
+        identifier = "search"
+        name = "搜索"
+        url = "/search/"
+        weight = 30
+        [menu.main.params]
+            icon = "search"
+
+    [[menu.main]]
+        identifier = "about"
+        name = "关于"
+        url = "/about/"
+        weight = 40
+        [menu.main.params]
+            icon = "user"
+
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = true
+
+        [markup.goldmark.extensions]
+            [markup.goldmark.extensions.passthrough]
+                enable = true
+                [markup.goldmark.extensions.passthrough.delimiters]
+                    block = [["\\[", "\\]"], ["$$", "$$"]]
+                    inline = [["\\(", "\\)"]]
+
+    [markup.tableOfContents]
+        startLevel = 2
+        endLevel = 4
+        ordered = true
+
+    [markup.highlight]
+        noClasses = false
+        codeFences = true
+        guessSyntax = true
+        lineNoStart = 1
+        lineNos = true
+        lineNumbersInTable = true
+        tabWidth = 4

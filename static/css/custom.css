@@ -1,0 +1,16 @@
+.article-content p > code,
+.article-content li > code {
+    color: #7a2e00;
+    background: #fff1dc;
+    border: 1px solid #f0c58f;
+    border-radius: 4px;
+    padding: 0.12em 0.34em;
+    font-weight: 600;
+}
+
+:root[data-scheme="dark"] .article-content p > code,
+:root[data-scheme="dark"] .article-content li > code {
+    color: #ffe0b5;
+    background: #4a2a10;
+    border-color: #8a5a28;
+}
