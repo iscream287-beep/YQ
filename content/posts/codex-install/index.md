@@ -64,7 +64,7 @@ comments = false
 
 ![使用密钥](step-08.png)
 
-在自己电脑的用户路径下找到红圈中的两个文件：`config.toml` 和 `auth.json`。
+在自己电脑的用户路径下找到红圈中的两个文件：`config.toml` 和 `auth.json`
 
 如果没有找到，就自己创建这两个文件。创建前请确保已经打开显示文件扩展名!
 
