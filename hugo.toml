@@ -1,6 +1,6 @@
 baseURL = "https://yqz888.xyz/"
 locale = "zh-CN"
-title = "氧气博客"
+title = "氧气站"
 theme = "hugo-theme-stack"
 defaultContentLanguage = "zh"
 hasCJKLanguage = true
